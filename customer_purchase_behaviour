@@ -1,0 +1,34 @@
+-- Example SQL Project
+
+-- Goal: Analyze customer purchase behavior on a fictional e-commerce site
+
+-- Import relevant tables
+CREATE TABLE customers (
+  id INT PRIMARY KEY,
+  name VARCHAR(255),
+  email VARCHAR(255),
+  age INT,
+  city VARCHAR(255)
+);
+
+CREATE TABLE orders (
+  id INT PRIMARY KEY,
+  customer_id INT,
+  date DATE,
+  total_order_price DECIMAL(10,2),
+  PRIMARY KEY (id),
+  FOREIGN KEY (customer_id) REFERENCES customers(id)
+);
+
+-- Filter customers by location
+SELECT *
+FROM customers
+WHERE city = 'New York';
+
+-- Find average order value by customer age group
+SELECT AVG(o.total_order_price) AS avg_order_value, c.age
+FROM orders o
+  JOIN customers c ON o.customer_id = c.id
+GROUP BY c.age;
+
+-- Visualize data through charts and graphs on a user interface
