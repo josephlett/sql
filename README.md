@@ -19,7 +19,6 @@ Test and optimize: Test your queries on the sample data and optimize their perfo
 
 
 
-Publish on GitHub: Finally, publish your project on GitHub by creating a repository and pushing your code to it. Include a license fileOpenAI: API Response was: Error aborted More information about this error: https://www.codegpt.co/docs/tutorial-basics/api_errorsTo build a good SQL project for display on GitHub, you can follow these steps:
 
 
 
